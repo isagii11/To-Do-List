@@ -1,0 +1,143 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background: linear-gradient(45deg, #FF6F61, #FFB75E); 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3E8E41;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #7a7cdb;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+#addTaskBtn{
+    margin-left: 10px;
+    background-color: #73c076;
+}
+#addTaskBtn:hover{
+    background-color: rgb(97, 240, 95);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #FF6F61; 
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#clearCompletedBtn{
+    width: 200px;
+    margin-right: 100px;
+}
+
+button:hover {
+    background-color: #FF4A3A; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #FFB75E; 
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: grey;
+    background-color: #D4EDDA; 
+}
+
+li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.clear-btn {
+    margin-top: 20px;
+    background-color: #FF4D4D;
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clear-btn:hover {
+    background-color: #FF3333;
+}
+
+.congrat-message {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    animation: congratsAnimation 2s forwards;
+}
+
+
+@keyframes congratsAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
